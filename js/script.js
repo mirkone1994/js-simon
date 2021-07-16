@@ -11,7 +11,9 @@ for (i=0; i<5; i++) {
 alert("Ricordati i seguenti numeri e inseriscili nella finestra di dialogo che ti comparirà tra 30 secondi, per ogni numero che ti ricorderai, il tuo punteggio incrementerà di 1: " + numbers);
 setTimeout(function(){
     for (i=0; i<5; i++) {
-        askNumber = parseInt(prompt("Inserisci un numero da 1 a 100"));
+        do {
+            askNumber = parseInt(prompt("Inserisci un numero da 1 a 100"));
+        } while (isNaN(askNumber) || askNumber < 1 || askNumber > 100)
         userNumbers.push(askNumber); 
         if (numbers[i] == userNumbers[i]) {
             result++;
@@ -24,7 +26,7 @@ setTimeout(function(){
         console.log(wrongNumbers);}
     }
     alert("Hai totalizzato " + result + " punti; i numeri corretti sono: " + correctNumbers + " mentre quelli errati sono: " + wrongNumbers)
-}, 3000);
+}, 30000);
 console.log(numbers);
 
 

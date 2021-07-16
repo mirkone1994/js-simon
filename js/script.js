@@ -18,8 +18,7 @@ setTimeout(function(){
         } else result + 0;
         console.log(result);
     }
-    console.log(userNumbers);
-    console.log(result);
+    alert("Hai totalizzato " + result + " punti")
 }, 3000);
 console.log(numbers);
 

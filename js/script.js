@@ -13,7 +13,7 @@ setTimeout(function(){
     for (i=0; i<5; i++) {
         do {
             askNumber = parseInt(prompt("Inserisci un numero da 1 a 100").trim());
-        } while (isNaN(askNumber) || askNumber < 1 || askNumber > 100)
+        } while (isNaN(askNumber) || askNumber < 1 || askNumber > 100);
         userNumbers.push(askNumber); 
         if (numbers[i] == userNumbers[i]) {
             result++;
@@ -21,12 +21,8 @@ setTimeout(function(){
         } else {
             result + 0;
             wrongNumbers.push(askNumber);
-        console.log(result);
-        console.log(correctNumbers);
-        console.log(wrongNumbers);}
+        }
     }
-    alert("Hai totalizzato " + result + " punti; i numeri corretti sono: " + correctNumbers + " mentre quelli errati sono: " + wrongNumbers)
+    alert("Hai totalizzato " + result + " punti; i numeri corretti sono: " + correctNumbers + " mentre quelli errati sono: " + wrongNumbers);
 }, 30000);
-console.log(numbers);
-
 

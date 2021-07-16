@@ -15,11 +15,10 @@ setTimeout(function(){
             askNumber = parseInt(prompt("Inserisci un numero da 1 a 100").trim());
         } while (isNaN(askNumber) || askNumber < 1 || askNumber > 100);
         userNumbers.push(askNumber); 
-        if (numbers[i] == userNumbers[i]) {
+        if (numbers[i] == userNumbers[i]) { // ho optato per questa soluzione in quanto volevo considerare come parametro per il punteggio anche l'ordine dei numeri
             result++;
             correctNumbers.push(askNumber);
         } else {
-            result + 0;
             wrongNumbers.push(askNumber);
         }
     }

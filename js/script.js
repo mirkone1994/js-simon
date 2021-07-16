@@ -1,5 +1,7 @@
 var numbers = [];
 var userNumbers = [];
+var correctNumbers = [];
+var wrongNumbers = [];
 var askNumber;
 var result = 0;
 for (i=0; i<5; i++) {
@@ -13,10 +15,15 @@ setTimeout(function(){
         userNumbers.push(askNumber); 
         if (numbers[i] == userNumbers[i]) {
             result++;
-        } else result + 0;
+            correctNumbers.push(askNumber);
+        } else {
+            result + 0;
+            wrongNumbers.push(askNumber);
         console.log(result);
+        console.log(correctNumbers);
+        console.log(wrongNumbers);}
     }
-    alert("Hai totalizzato " + result + " punti")
+    alert("Hai totalizzato " + result + " punti; i numeri corretti sono: " + correctNumbers + " mentre quelli errati sono: " + wrongNumbers)
 }, 3000);
 console.log(numbers);
 

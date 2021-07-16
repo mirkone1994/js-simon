@@ -12,7 +12,7 @@ alert("Ricordati i seguenti numeri e inseriscili nella finestra di dialogo che t
 setTimeout(function(){
     for (i=0; i<5; i++) {
         do {
-            askNumber = parseInt(prompt("Inserisci un numero da 1 a 100"));
+            askNumber = parseInt(prompt("Inserisci un numero da 1 a 100").trim());
         } while (isNaN(askNumber) || askNumber < 1 || askNumber > 100)
         userNumbers.push(askNumber); 
         if (numbers[i] == userNumbers[i]) {
